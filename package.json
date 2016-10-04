@@ -1,0 +1,28 @@
+{
+  "name": "myfirstapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bluebird": "2.9.24",
+    "body-parser": "~1.9.0",
+    "chalk": "~0.5",
+    "helmet": "~0.5.0",
+    "http-proxy": "^1.12.0",
+    "lodash": "~3.7.0",
+    "mongoose": "^4.2.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitoo7/myFirstApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitoo7/myFirstApp/issues"
+  },
+  "homepage": "https://github.com/nitoo7/myFirstApp#readme"
+}
