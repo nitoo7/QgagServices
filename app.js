@@ -22,7 +22,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/details', function (req, res) {
-  Gag.findOne({}).exec().then(function(data){return res.send(data)})
+  res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  Gag.find({}).exec().then(function(data){return res.send(data)})
 });
 
 app.listen(process.env.PORT || 3000, function () {
