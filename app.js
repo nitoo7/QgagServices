@@ -22,9 +22,14 @@ app.get('/', function (req, res) {
 });
 
 app.get('/details', function (req, res) {
+  console.log('Response->', req.query.id)
   res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  Gag.find({}).exec().then(function(data){return res.send(data)})
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  if(req.query.id) {
+    Gag.find({_id: req.query.id}).exec().then(function(data){return res.send(data[0])})
+  } else {
+    Gag.find({}).exec().then(function(data){return res.send(data)})
+  }
 });
 
 app.listen(process.env.PORT || 3000, function () {
