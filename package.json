@@ -7,8 +7,9 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "base64-img": "^1.0.3",
     "bluebird": "2.9.24",
-    "body-parser": "~1.9.0",
+    "body-parser": "^1.9.3",
     "chalk": "~0.5",
     "express": "^4.14.0",
     "helmet": "~0.5.0",
